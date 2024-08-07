@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="first">
+        <a href="https://vk.com/scscarsbitch" target="_blank">Street Car Special</a>
+        <img alt="JDM" 
+        src="https://emojio.ru/images/apple-m/1f1ef-1f1f5.png"
+        class="jdm"/>
+    </div>
+<div class="car-list">
+    <div *ngFor="let car of cars" class="car-block">
+      <!-- Шаблон для отображения информации о машине -->
+        <div class="car-header">
+            <h3>{{car.model}}</h3>
+            <button class="link-button">→</button>
+        </div>
+        <div class="car-details">
+        <div class="car-details-left">
+            <p><strong>Engine:</strong> {{car.engine}}</p>
+            <p><strong>HP:</strong> {{car.hp}}</p>
+        </div>
+        <div class="car-details-right">
+            <p><strong>Type:</strong> {{car.type}}</p>
+             <p><strong>Cost:</strong> {{car.price}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+  

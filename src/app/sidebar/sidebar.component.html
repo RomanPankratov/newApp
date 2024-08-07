@@ -1,0 +1,33 @@
+<aside class="sidenav">
+  <div class="filter-controls">
+    <h3>Марка</h3>
+    <input type="text" id="find" placeholder="Поиск по моделям" class="find" [(ngModel)]="searchText" (ngModelChange)="onSearchChange()">
+    <div class="dropdown-checkbox">
+      <h3>Двигатель</h3>
+      <span class="label-title">Выбрано {{selectedEngines.length}}</span>
+      <ul>
+        <li *ngFor="let engine of ['SR20DET', '2JZ', 'JZ', 'RB25']">
+          <label>
+            <input type="checkbox" [value]="engine"  (change)="onEngineChange(engine, $event)"> {{engine}}
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="type">
+      <h3>Тип</h3>
+      <label><input type="radio" name="type" value="Drift" [(ngModel)]="selectedType" (change)="onTypeChange('Drift')"> Drift</label>
+      <label><input type="radio" name="type" value="Drag" [(ngModel)]="selectedType" (change)="onTypeChange('Drag')"> Drag</label>
+      <label><input type="radio" name="type" value="Comfort" [(ngModel)]="selectedType" (change)="onTypeChange('Comfort')"> Comfort</label>
+    </div>
+    <div class="sort">
+      <label for="sort-price"><h3>Сортировать по цене:</h3></label>
+      <select id="sort-price" [(ngModel)]="selectedSort" (ngModelChange)="onSortChange($event)">
+        <option value="none">Не сортировать</option>
+        <option value="asc">По возрастанию</option>
+        <option value="desc">По убыванию</option>
+      </select>
+    </div>
+    <button id="reset-filters" (click)="onResetFilters()">Сбросить фильтры</button>
+  </div>
+</aside>
+

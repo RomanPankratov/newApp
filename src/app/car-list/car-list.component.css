@@ -1,0 +1,80 @@
+
+.car-block {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .car-block .car-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .car-block h3 {
+    margin: 0;
+  }
+  
+  .car-block .link-button {
+    background: none;
+    border: none;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #2f00ff;
+  }
+  
+  .car-block .link-button:hover {
+    opacity: 75%;
+  }
+  
+  .car-block .car-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .car-block .car-details-left,
+  .car-block .car-details-right {
+    flex: 1;
+  }
+  
+  .car-block .car-details-left p,
+  .car-block .car-details-right p {
+    margin: 20px;
+    padding: 5px;
+    color: #2f00ff;
+  }
+  
+  .car-block .car-details-left p strong,
+  .car-block .car-details-right p strong {
+    display: inline-block;
+    width: 80px;
+    color: #000;
+  }
+
+.avatar{
+    width: 200px;
+}
+.jdm{
+    padding-left: 20px;
+    width: 35px;  
+}
+.first{
+   padding-left: 0px;
+   text-align: center;
+   /* padding-bottom: 30px; */
+}
+.first a{
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.first a:hover{
+    text-decoration: underline red;
+}
+.first a:active{
+    color: blue;
+}
