@@ -1,2 +1,13 @@
-<app-sidebar (filtersChanged)="onFiltersChanged($event)" (resetFilters)="onResetFilters()"></app-sidebar>
-<app-car-list [cars]="filteredCars"></app-car-list>
+<!-- Контент главной страницы -->
+<div *ngIf="isHomePage(); else carDetail">
+  <app-sidebar (filtersChanged)="onFiltersChanged($event)" (resetFilters)="onResetFilters()"></app-sidebar>
+  <app-car-list [cars]="paginatedCars"></app-car-list>
+  <app-pagination [currentPage]="currentPage" [totalPages]="totalPages" (pageChange)="onPageChange($event)"></app-pagination>
+</div>
+
+<!-- Контент страницы деталей автомобиля -->
+<ng-template #carDetail>
+  <app-car-detail></app-car-detail>
+</ng-template>
+
+<router-outlet></router-outlet>

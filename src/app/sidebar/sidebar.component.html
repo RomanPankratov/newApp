@@ -8,7 +8,9 @@
       <ul>
         <li *ngFor="let engine of ['SR20DET', '2JZ', 'JZ', 'RB25']">
           <label>
-            <input type="checkbox" [value]="engine"  (change)="onEngineChange(engine, $event)"> {{engine}}
+            <input type="checkbox" [value]="engine" 
+                   [checked]="selectedEngines.includes(engine)"
+                   (change)="onEngineChange(engine, $event)"> {{engine}}
           </label>
         </li>
       </ul>

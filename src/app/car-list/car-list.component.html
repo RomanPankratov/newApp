@@ -10,7 +10,7 @@
       <!-- Шаблон для отображения информации о машине -->
         <div class="car-header">
             <h3>{{car.model}}</h3>
-            <button class="link-button">→</button>
+            <button class="link-button" [routerLink]="['/car', car.model]" >→</button>
         </div>
         <div class="car-details">
         <div class="car-details-left">
